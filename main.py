@@ -34,12 +34,12 @@ def main():
     updater = Updater('754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4')
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('dog',dog))
-    # updater.start_polling()
-    updater.start_webhook(listen='0.0.0.0',
-                            port=PORT,
-                            url_path=TOKEN)
-    updater.bot.set_webhook("https://bot-testttt.herokuapp.com/" + TOKEN)
-    updater.idle()
+    updater.start_polling()
+    # updater.start_webhook(listen='0.0.0.0',
+    #                         port=PORT,
+    #                         url_path=TOKEN)
+    # updater.bot.set_webhook("https://bot-testttt.herokuapp.com/" + TOKEN)
+    # updater.idle()
 
 if __name__ == '__main__':
     main()
