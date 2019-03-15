@@ -1,6 +1,8 @@
 from telegram.ext import Updater, CommandHandler
 import requests
 import re
+import os
+
 
 def get_url():
     # Access the API and get the image URL
@@ -26,10 +28,17 @@ def dog(bot,update):
     bot.send_photo(chat_id=chat_id, photo=url)
 
 def main():
+    TOKEN = "754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4"
+    PORT = int(os.environ.get('PORT', '8443'))
+
     updater = Updater('754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4')
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('dog',dog))
-    updater.start_polling()
+    # updater.start_polling()
+    updater.start_webhook(listen='0.0.0.0',
+                            port=PORT,
+                            url_path=TOKEN)
+    updater.bot.set_webhook("https://bot-testttt.herokuapp.com/" + TOKEN)
     updater.idle()
 
 if __name__ == '__main__':
