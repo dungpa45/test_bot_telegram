@@ -25,7 +25,7 @@ def get_url1():
 
 # iterate the URL until we get the file extension that we want
 def get_image_url():
-    allowed_extension = ['jpg', 'JPG', 'jpeg', 'png', 'mp4','gif']
+    allowed_extension = ['jpg', 'JPG', 'jpeg', 'png']
     file_extension = ''
     while file_extension not in allowed_extension:
         url = get_url()
@@ -34,7 +34,7 @@ def get_image_url():
     return url 
 
 def get_image_url1():
-    allowed_extension = ['jpg', 'JPG', 'jpeg', 'png', 'mp4','gif']
+    allowed_extension = ['jpg', 'JPG', 'jpeg', 'png']
     file_extension = ''
     while file_extension not in allowed_extension:
         url1 = get_url1()
