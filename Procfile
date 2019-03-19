@@ -1,2 +1,1 @@
-web: python main.py
-web: python send_mes.py
+web: python main.py, send_mes.py
