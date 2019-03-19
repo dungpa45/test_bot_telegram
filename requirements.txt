@@ -126,8 +126,8 @@ heroku==0.1.4
 # pandocfilters==1.4.2
 # parso==0.3.1
 # partd==0.3.8
-# path.py==11.1.0
-# pathlib2==2.3.2
+path.py==11.1.0
+pathlib2==2.3.2
 # patsy==0.5.0
 # pep8==1.7.1
 # pickleshare==0.7.4

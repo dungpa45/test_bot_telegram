@@ -58,9 +58,9 @@ def cat(bot1,update1):
 
 # @post('/')
 def main():
-    # TOKEN = "754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4"
+    TOKEN = "754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4"
     # PORT = int(os.environ.get('PORT', '8443'))
-    updater = Updater('754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4')
+    updater = Updater(TOKEN)
     dp = updater.dispatcher
     dp.add_handler(CommandHandler('dog',dog))
     dp.add_handler(CommandHandler('cat',cat))
