@@ -1,7 +1,6 @@
 from telegram.ext import Updater, CommandHandler
-import requests
-import re
-import os
+import requests, re, os
+# from bottle import run, post
 # from flask import Flask
 # app = Flask(__name__)
 
@@ -57,6 +56,7 @@ def cat(bot1,update1):
     chat_id = update1.message.chat_id
     bot1.send_photo(chat_id=chat_id, photo=url1)
 
+# @post('/')
 def main():
     # TOKEN = "754452513:AAFOY_HfYO8dlX8i-R5wE2bjpr3N4i7_3a4"
     # PORT = int(os.environ.get('PORT', '8443'))
@@ -70,7 +70,8 @@ def main():
     #                         url_path=TOKEN)
     # updater.bot.set_webhook("https://bot-testttt.herokuapp.com/" + TOKEN)
     updater.idle()
-
+    
 if __name__ == '__main__':
     main()
+    # run(host='localhost',port=8080, debug=True)
     # app.run(debug=True)
