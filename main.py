@@ -7,18 +7,14 @@ import requests, re, os
 def get_url():
     # Access the API and get the image URL
     contents = requests.get('https://random.dog/woof.json').json()
-    # contents1 = requests.get('http://aws.random.cat/meow').json()
     #Get the image URL since we need that parameter to be able to send the image.
     image_url = contents['url']
-    # image_file = contents1['file']
     return image_url
 
 def get_url1():
     # Access the API and get the image URL
-    # contents = requests.get('https://random.dog/woof.json').json()
     contents1 = requests.get('http://aws.random.cat/meow').json()
     #Get the image URL since we need that parameter to be able to send the image.
-    # image_url = contents['url']
     image_file = contents1['file']
     return image_file
 
@@ -73,5 +69,4 @@ def main():
     
 if __name__ == '__main__':
     main()
-    # run(host='localhost',port=8080, debug=True)
-    # app.run(debug=True)
+   
